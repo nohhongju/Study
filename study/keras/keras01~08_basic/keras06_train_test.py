@@ -13,8 +13,8 @@ from tensorflow.keras.layers import Dense
 import numpy as np
 
 #1. 데이터
-x_train = np.array([1,2,3,4,5,6,7])      # 훈련
-x_test = np.array([8,9,10])             # 평가
+x_train = np.array([1,2,3,4,5,6,7])   # 훈련
+x_test = np.array([8,9,10])           # 평가
 y_train = np.array([1,2,3,4,5,6,7])
 y_test = np.array([8,9,10])
 
@@ -31,6 +31,6 @@ model.fit(x_train, y_train, epochs=100, batch_size=1)
 
 #4. 평가, 예측
 loss = model.evaluate(x_test,y_test)
-print('loss: ', loss) # 결과값에서 나온 loss?
+print('loss: ', loss)  # loss:  0.0003017401904799044
 result = model.predict([11])
-print('[11]의 예측값 : ', result)
+print('[11]의 예측값 : ', result)  # [11]의 예측값 :  [[10.974855]]
